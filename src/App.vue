@@ -1,11 +1,16 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
     <div id="nav">
       APP
+=======
+    <!-- <div id="nav">
+>>>>>>> 8137764e5de19ab2e8bb34fcbd49823eec371793
       <br/>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/login">Login</router-link>
+    </div> -->
     <router-view/>
   </div>
 </template>
