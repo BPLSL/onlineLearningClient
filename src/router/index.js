@@ -25,6 +25,40 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '@/components/Login.vue')
+  },
+  {
+    path: '/Student',
+    name: 'Student',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '@/views/StudentLogin.vue'),
+    children:[
+      {
+        path: '/Main',
+        name: 'StudentMain',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "about" */ '@/views/StudentMain.vue')
+      }
+    ]
+  },
+  {
+    path: '/TeacherLogin',
+    name: 'TeacherLogin',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '@/views/TeacherLogin.vue')
+  },
+  {
+    path: '/AdminLogin',
+    name: 'AdminLogin',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '@/views/AdminLogin.vue')
   }
 ]
 
