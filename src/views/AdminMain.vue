@@ -1,13 +1,13 @@
 <template>
   <div>
-    管理员登录界面
+    管理员主界面
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'AdminLogin',
+  name: 'AdminMain',
   components: {
   }
 }

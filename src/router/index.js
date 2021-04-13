@@ -11,54 +11,60 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
     path: '/login',
     name: 'Login',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@/components/Login.vue')
+    component: () => import('@/components/Login.vue')
   },
   {
-    path: '/Student',
+    path: '/student',
     name: 'Student',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@/views/StudentLogin.vue'),
+    component: () => import('@/views/Student.vue'),
     children:[
       {
-        path: '/Main',
+        path: 'login',
+        name: 'StudentLogin',
+        component: () => import('@/views/StudentLogin.vue')
+      },
+      {
+        path: 'main',
         name: 'StudentMain',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ '@/views/StudentMain.vue')
+        component: () => import('@/views/StudentMain.vue')
       }
     ]
   },
   {
-    path: '/TeacherLogin',
-    name: 'TeacherLogin',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@/views/TeacherLogin.vue')
+    path: '/teacher',
+    name: 'Teacher',
+    component: () => import('@/views/Teacher.vue'),
+    children:[
+      {
+        path: 'login',
+        name: 'TeacherLogin',
+        component: () => import('@/views/TeacherLogin.vue')
+      },
+      {
+        path: 'main',
+        name: 'TeacherMain',
+        component: () => import('@/views/TeacherMain.vue')
+      }
+    ]
   },
   {
-    path: '/AdminLogin',
-    name: 'AdminLogin',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@/views/AdminLogin.vue')
+    path: '/admin',
+    name: 'Admin',
+    component: () => import('@/views/Admin.vue'),
+    children:[
+      {
+        path: 'login',
+        name: 'AdminLogin',
+        component: () => import('@/views/AdminLogin.vue')
+      },
+      {
+        path: 'main',
+        name: 'AdminMain',
+        component: () => import('@/views/AdminMain.vue')
+      }
+    ]
   }
 ]
 

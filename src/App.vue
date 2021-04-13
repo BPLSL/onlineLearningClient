@@ -2,9 +2,9 @@
   <div id="app">
     <!-- <div id="nav">
       <br/>
-      <router-link to="/StudentLogin">学生登录</router-link> |
-      <router-link to="/TeacherLogin">老师登录</router-link> |
-      <router-link to="/AdminLogin">管理员登录</router-link>
+      <router-link to="/Student/login">学生登录</router-link> |
+      <router-link to="/Teacher/login">老师登录</router-link> |
+      <router-link to="/Admin/login">管理员登录</router-link>
     </div> -->
     <router-view/>
   </div>

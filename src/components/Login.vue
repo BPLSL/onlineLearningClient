@@ -1,6 +1,5 @@
 <template>
     <div id="div">
-
         <el-container>
             <el-header>Header</el-header>
             <el-main>
